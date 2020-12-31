@@ -24,6 +24,44 @@
         * 9	2
         * 10 1
         */
+      let numero =[];
+      for (let i = 0; i < 11; i++) {
+          
+        numero[i] = i + " " + 0;
+               
+      }
+      while (true) {
+          
+      
+      let respuesta = parseInt(prompt("Escribe un número"));
+
+      if (respuesta > 10)
+       {
+          console.log("Error");
+      }
+      else if( respuesta < 0)
+      {
+          console.clear();
+          for (let i = 0; i < numero.length; i++) {
+              console.log(numero[i]);
+              
+          }
+      }
+      
+      else
+      {
+          let espacio = numero[respuesta].indexOf(" ");
+          let valor = parseInt(numero[respuesta].substring(espacio));
+          valor++;
+          numero[respuesta]= respuesta + " " + valor;
+
+          
+      }
+    }
+       
+
+
+
     </script>
 </body>
 
